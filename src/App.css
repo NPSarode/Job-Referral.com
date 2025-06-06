@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  /* --primary: #404079; */
+  --primary: #255F61;
+  --bg-color: #255F6144;
+  --hover-color: rgb(149, 141, 141);
+  --text-color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background: var(--bg-color); */
+  cursor: default;
+}
+
+.customCard, .card {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.644), rgba(255, 255, 255, 0.644));
+  border: none;
+}
+
+/****************************** Navbar ******************************/
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--primary);
+  height: 7vh;
+  /* background-image: linear-gradient(rgb(29, 90, 92, 0.5), rgb(29, 90, 92, 1));; */
+}
+
+.navbar div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar div img {
+  cursor: pointer;
+  width: 60%;
+  margin-inline-start: 2vw;
+}
+
+.parentUL {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.parentUL a { 
+  text-decoration: none;
+}
+.parentUL li {
+  list-style: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 1s ease-out;
+}
+.parentUL li:hover {
+  /* letter-spacing: 1px;
+  transform: scale(1.1);
+  list-style: none; */
+  text-decoration: none;
+}
+
+.settingLogo {
+  width: 3.5vw;
+}
+
+.LogoutButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+@media (max-width: 700px) {
+  .ListItems {
+    position: absolute;
+    top: 7vh;
+    left: -1000px;
+    height: calc(100vh - 7vh);
+    width: 40%;
+    padding-top: 40%;
+    background: var(--primary);
+    justify-content: center;
+    transition: 1s  ease-out;
+  }
+  .parentUL {
+    flex-direction: column;
+  }
+  .navbar div {
+    align-items: start;
+    justify-content: flex-start;
+  }
+  .navbar div img {
+    width: 10vw;
+  }
+  .active {
+    left: 0;
+  }
+  .LogoutButton {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    width: 50%;
+    padding-left: 50px;
+  }
+}
+
+/****************************** Profile ******************************/
+
+.profileImage {
+  width: 100%;
+  padding: 0 20px;
+  /* background-image: url("https://png.pngtree.com/png-vector/20220226/ourmid/pngtree-metal-game-avatar-frame-png-image_4402617.png");
+    background-size: cover;
+    background-position: center; */
+}
+
+.profileImage img {
+  width: 50%;
+}
+
+.connectDetail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+  padding: 0 20px;
+}
+
+.connectDetail img {
+  width: 10%;
+}
+
+.generalInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutInfo {
+  letter-spacing: 1.5px;
+  word-spacing: 10px;
+}
+
+.techIcon {
+  width: 10%;
+}
+
+/****************************** Profile2 ******************************/
+
+.leftProfile {
+  animation: leftSlide 0.5s ease-in-out;
+}
+.rigthProfile {
+  animation: rightSlide 0.5s ease-in-out;
+}
+
+@keyframes rightSlide {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes leftSlide {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  
+}
+
+.coverImage img{
+  width: 100%;
+  max-height: 20vh;
+}
+
+.avatarImage {
+  width: 5vw;
+  position: absolute;
+  top: -5vh;
+  left: 1.5vw;
+  filter: drop-shadow(0 0 20px #373535);
+  transition: .3s ease-out;
+}
+
+.avatarImage:hover {
+  filter: drop-shadow(20px 0 20px #373535);
+  transform: translate(-10px, -10px);
+}
+
+@media (max-width: 600px) {
+  .leftProfile,
+  .coverImage, 
+  .connectDetail,
+  .profilePage.row,
+  .profilePage.row > div, 
+  .profilePage{
+    padding: 0;
+    margin: 0;
+  }
+  .userExperience {
+    margin-inline: 0;
+  }
+  .avatarImage {
+    width: 25vw;
+    top: -7vh;
+    left: 3vw;
+  }
+}
+
+/****************************** Footer ******************************/
+
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: x-small;
+  font-weight: 100;
+  width: 100%;
+  height: 4vh;
+  color: var(--bg-color);
+  background: var(--primary);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/****************************** Login ******************************/
+
+.myForm {
+  width: 100%;
+  height: 100vh;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+  url("https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya3xlbnwwfHwwfHx8MA%3D%3D"); */
+  background-image: linear-gradient(to left, #000000, #c8b8c866, #000000),
+    url("https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya3xlbnwwfHwwfHx8MA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.myForm > div {
+  width: 30%;
+  padding: 20px;
+  background: var(--primary);
+  border-radius: 20px;
+  color: var(--bg-color);
+  border: 1px solid #333;
+}
+
+.loginImage {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/****************************** Job Summary ******************************/
+@media (max-width: 600px) {
+  .myIcons {
+    font-size: 8vw;
+    margin-right: 20px;
+  }
+  
+}
+/****************************** Login2 ******************************/
+
+.mainLogin {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: #060402;
+}
+
+.loginImage {
+  width: 70%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://c1.wallpaperflare.com/preview/144/259/752/dream-job-application-location-job.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ece4e4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 5vw 2vw;
+  color: rgb(129, 182, 182);
+}
+
+.loginImage h4 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 3vw;
+  letter-spacing: 5px;
+}
+.loginImage p {
+  align-items: center;
+  width: 75ch;
+  line-height: 2.5vw;
+  font-size: 1vw;
+  margin-top: 58vh;
+}
+
+.loginForm {
+  padding: 5vw 3vw;
+  width: 30%;
+  box-shadow: -10px 0 20px rgb(28, 41, 41);
+  /* background-color: rgb(29, 90, 92); */
+  background-image: linear-gradient(rgb(29, 90, 92, 0.5), rgb(29, 90, 92, 1));
+}
+
+.loginForm h1 {
+  font-size: 3vw;
+  font-weight: 700;
+}
+.loginForm form {
+  padding-top: 2vw;
+}
+.loginForm form input{
+  background-color: var(--bg-color);
+  border: 2px dashed var(--primary);
+  color: #060402;
+  box-shadow: 0 0 10px var(--primary);
+  border-radius: 10px;
+}
+.loginForm form input::placeholder{
+  color: var(--primary);
+}
+.loginForm form button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 0.4vw 0;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+} 
+.loginForm form button:hover {
+  background: var(--bg-color);
+}
+.registerFooter {
+  padding-top: 15vw;
+}
+
+.loginFooter {
+  padding-top: 15vw;
+}
+
+
+
+.myIcons {
+  font-size: 1.5vw; 
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .mainLogin {
+    flex-direction: column;
+  }
+  .loginImage {
+    width: 100%;
+    height: 40vh;
+  }
+  .loginImage h4 {
+    font-size: 6vw;
+    letter-spacing: 0.9px;
+  }
+  .loginImage p {
+    margin-top: 40vw;
+    font-size: small;
+    line-height: 5vw;
+    letter-spacing: 0.3vw;
+    width: 40ch;
+  }
+  .loginForm {
+    width: 100%;
+    height: 60vh;
+    box-shadow: 0 -10px 20px rgb(28, 41, 41);
+    background-image: linear-gradient(rgb(29, 90, 92, 0.5), rgb(29, 90, 92, 1));
+  }
+  .loginForm h1 {
+    font-size: 8vw;
+    letter-spacing: 1.5vw;
+  }
+  .loginForm p {
+    font-size: 4vw;
+  }
+  .registerFooter {
+    padding-top: 5vw;
+  }
+
+
+  .myIcons {
+    font-size: 8vw;
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+/****************************************************************************/
+
+#dataNotFoundImage {
+  width: 50%;
+}
