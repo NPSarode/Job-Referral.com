@@ -8,9 +8,9 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS, Axios, React Router
+- **Frontend:** React.js, ReactStrap, Axios, React Router
 - **Backend:** Node.js, Express.js
-- **Database:** MongoDB / PostgreSQL (based on your implementation)
+- **Database:** MongoDB 
 - **Authentication:** JWT, OAuth (optional)
 - **Others:** REST API, Form Validation, Role-Based Access
 
@@ -19,9 +19,7 @@
 ## 🚀 Key Features
 
 - 🔍 Browse open job positions across companies
-- 🙋 Request referrals directly from employees
-- 👥 Professional user profiles with referral history
 - 🔐 User authentication and secure data handling
-- 📱 Responsive, clean, and intuitive UI
+
 
 
